@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: url(images/backgroundPhoto.jpg);
+    background-size: cover;
+    background-position: center;
+    letter-spacing: 1px;
+    color: #2E250F;
+}
+h1{
+    text-shadow: 2px 5px 3px darkgoldenrod;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#calculator{
+    border: 1px double darkgoldenrod;
+    background-color: rgba(219, 171, 52, 0.8);
+    box-shadow: 5px 5px 10px black;
+    height: 400px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+/*FORM*/
+form{
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#inputs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+    height: 40%;
+}
+#inputs-container div span{
+    font-size: 1.3rem;
+    position: relative;
+    top: 4px;
+}
+#inputs-container input{
+   width: 200px;
+   height: 35px;
+   padding-right: 5px;
+   text-align: end;
+   margin-left: 10px;
+   font-size: 1rem;
+   outline: none;
+}
+
+#buttons-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    height: 80px;
+    margin-top: 20px;
+}
+#buttons-container button{
+    font-size: 18px;
+    background-color: rgba(157, 124, 41, 0.486);
+    text-shadow: 2px 2px 3px darkgoldenrod;
+    width:120px;
+    height: 40px;
+    padding:5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+#buttons-container button:hover{
+    background-color: darkgoldenrod;
+}
+/*Result*/
+#result-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:20%;
+    margin: 0 auto;
+    width: 80%;
+}
+#result-container p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 40px;
+}
+#result-container span{
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+/*Description*/
+#description-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:30%;
+    margin: 15px auto;
+    width: 80%;
+}
+#description{
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.973);
+}
+/*Error message*/
+.hidden{
+    display: none;
+}
+#errorMessage{
+    color: darkred;
+    position: relative;
+    margin-top: 15px;
+}
+
+/*Media query*/
+@media (max-width:800px)
+{
+    body{
+        padding: 10px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    #calculator{
+        height: 70%;
+        width: 85%;
+        padding: 40px;
+    }
+    #inputs-container{
+        width: 100%;
+    }
+    #inputs-container div span{
+        font-size: 1rem;
+        top: 0px;
+    }
+    #inputs-container input{
+       width: 150px;
+       height: 30px;
+       margin-left: 10px;
+    }
+    #buttons-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 300px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    #buttons-container button{
+        font-size: 15px;
+        width:100px;
+    }
+    #result-container p{
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    #result{
+        margin-top: 10px;
+    }
+    #description-container{
+        width: 90%;
+    }
+    #description{
+        font-size: 1.5rem;
+        bottom: 10px;
+    }
+    #errorMessage{
+        font-size: 12px;
+        top: 5px;
+    } 
+}
